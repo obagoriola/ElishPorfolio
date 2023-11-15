@@ -1,0 +1,185 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+header .nav-bar{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    }
+
+.nav-bar ul {
+    display:flex;
+    list-style-type: none;
+    border: 1px solid black;
+    border: none;
+    margin:auto ;
+}
+.nav-bar ul li a{
+    margin: 10px 10px;
+    text-decoration: none;
+    text-overflow: clip;
+    color: black;
+    font-size: 20px;
+    font-family: cursive;
+    display: flex;
+    
+}
+
+
+/*FOR SIDED BAR*/
+
+.wrapper{
+    height: 10vh;
+
+}
+
+.sidebar {
+    position:fixed;
+    left: -250px;
+    width: 250px;
+    background-color: #042331;
+    transition: all .5s ease; 
+}
+
+.sidebar h1 {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: gray;
+    user-select: none;
+}
+
+.sidebar ul li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid red;
+    border-bottom: 1px solid black;
+    transition: all .5s ease;
+}
+
+.sidebar li:hover a{
+    padding-left: 50px;
+}
+
+.sidebar ul  li a{
+    margin-right: 16px;
+}
+.sidebar ul{
+    list-style-type: none;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 5px;
+    transition: all.5s;
+}
+
+label #btn {
+    left: 40px;
+    font-size: 35px;
+    top: 10px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+    position: fixed;
+}
+
+label #cancel {
+    z-index: 1;
+    left: -195px;
+    top: 10px;
+    font-size: 30px;
+    color: #0a5275;
+    padding: 4px 9px;
+    position: fixed;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    left: 195px;
+}
+
+@media only screen and (min-width:600px){
+    header .nav-bar{
+        display: flex;
+    }
+    .wrapper{
+        display: none;
+    }
+}
+
+main .content{
+    background-image: url(/temp2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    background-position: 100%;
+    justify-content: center;
+        height: 100vh;
+        align-self: center;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 3);
+        margin: 30px;
+        border-radius: 5px;
+}
+main .content h3{
+        font-size: 40px;
+        font-weight: 900;
+        color: white;
+        text-shadow: 2px 6px  rgb(14, 0, 0);
+}
+main .content h1{
+    text-shadow: 2px 6px  rgb(14, 0, 0);
+    font-style: italic;
+    color: white;
+}
+main .content p{
+    font-style: italic;
+    font-size: larger;
+    color: white;
+}
+
+footer {
+    
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+    align-items: center;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0 20px;
+}
